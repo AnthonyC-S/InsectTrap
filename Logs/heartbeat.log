@@ -1,0 +1,1225 @@
+InsectTrapProject/main.py started at 2024-08-01_18:05:26 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_18:07:20 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_18:09:55 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_18:12:42 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_18:19:59 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_18:26:42 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_18:32:02 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_18:34:33 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_18:42:15 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_19:00:56 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_20:01:09 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_20:08:52 EDT 2024
+main.py running at 2024-08-01_20:10:04 EDT 2024
+main.py running at 2024-08-01_20:11:19 EDT 2024
+main.py running at 2024-08-01_20:12:31 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_20:17:11 EDT 2024
+main.py running at 2024-08-01_20:18:15 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_20:26:29 EDT 2024
+main.py running at 2024-08-01_20:27:32 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_20:48:06 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'BOARD37', 'J8:37', 26, 'BCM26', 'GPIO26', 'WPI25', '26'}), pull='', row=19, col=1, interfaces=frozenset({'sdio', 'dpi', 'jtag', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:49:19 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'26', 'BOARD37', 26, 'BCM26', 'J8:37', 'WPI25', 'GPIO26'}), pull='', row=19, col=1, interfaces=frozenset({'dpi', 'gpio', 'sdio', 'jtag'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:50:19 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_20:50:50 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'BCM26', 'J8:37', 'BOARD37', 26, 'GPIO26', '26', 'WPI25'}), pull='', row=19, col=1, interfaces=frozenset({'jtag', 'sdio', 'gpio', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:51:53 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'26', 'J8:37', 26, 'BCM26', 'BOARD37', 'WPI25', 'GPIO26'}), pull='', row=19, col=1, interfaces=frozenset({'dpi', 'jtag', 'sdio', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:52:54 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'26', 'BCM26', 'WPI25', 'GPIO26', 'J8:37', 26, 'BOARD37'}), pull='', row=19, col=1, interfaces=frozenset({'dpi', 'jtag', 'sdio', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:53:54 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'BOARD37', 26, 'GPIO26', 'J8:37', 'BCM26', 'WPI25', '26'}), pull='', row=19, col=1, interfaces=frozenset({'sdio', 'gpio', 'dpi', 'jtag'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:54:54 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'26', 'WPI25', 'BOARD37', 'GPIO26', 26, 'BCM26', 'J8:37'}), pull='', row=19, col=1, interfaces=frozenset({'gpio', 'jtag', 'dpi', 'sdio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:55:54 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'26', 'GPIO26', 'WPI25', 26, 'BOARD37', 'BCM26', 'J8:37'}), pull='', row=19, col=1, interfaces=frozenset({'gpio', 'sdio', 'jtag', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:56:54 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'GPIO26', 'BOARD37', 26, '26', 'BCM26', 'WPI25', 'J8:37'}), pull='', row=19, col=1, interfaces=frozenset({'jtag', 'gpio', 'dpi', 'sdio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:57:54 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'BCM26', 'GPIO26', 'J8:37', 26, 'BOARD37', 'WPI25', '26'}), pull='', row=19, col=1, interfaces=frozenset({'gpio', 'sdio', 'jtag', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:58:57 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'GPIO26', 'J8:37', 'BCM26', 'BOARD37', 26, '26', 'WPI25'}), pull='', row=19, col=1, interfaces=frozenset({'dpi', 'gpio', 'jtag', 'sdio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_20:59:57 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'26', 'BOARD37', 'J8:37', 'GPIO26', 'BCM26', 26, 'WPI25'}), pull='', row=19, col=1, interfaces=frozenset({'jtag', 'gpio', 'sdio', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_21:00:58 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'J8:37', '26', 'GPIO26', 'WPI25', 'BCM26', 'BOARD37', 26}), pull='', row=19, col=1, interfaces=frozenset({'gpio', 'sdio', 'jtag', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_21:01:59 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'J8:37', '26', 'BCM26', 26, 'WPI25', 'GPIO26', 'BOARD37'}), pull='', row=19, col=1, interfaces=frozenset({'sdio', 'dpi', 'jtag', 'gpio'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_21:03:00 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'BOARD37', '26', 'BCM26', 'GPIO26', 'J8:37', 26, 'WPI25'}), pull='', row=19, col=1, interfaces=frozenset({'gpio', 'sdio', 'dpi', 'jtag'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_21:04:00 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'J8:37', '26', 'GPIO26', 26, 'BOARD37', 'WPI25', 'BCM26'}), pull='', row=19, col=1, interfaces=frozenset({'sdio', 'gpio', 'dpi', 'jtag'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_21:05:00 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'26', 'BCM26', 26, 'BOARD37', 'GPIO26', 'WPI25', 'J8:37'}), pull='', row=19, col=1, interfaces=frozenset({'sdio', 'jtag', 'gpio', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_21:06:03 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 411, in pin
+    pin = self.pins[info]
+          ~~~~~~~~~^^^^^^
+KeyError: PinInfo(number=37, name='GPIO26', names=frozenset({'J8:37', 'BCM26', 'BOARD37', '26', 26, 'GPIO26', 'WPI25'}), pull='', row=19, col=1, interfaces=frozenset({'gpio', 'jtag', 'sdio', 'dpi'}))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 5, in <module>
+    import keyboardControl as kC
+  File "/home/pi/InsectTrap/InsectTrapProject/keyboardControl.py", line 1, in <module>
+    import lightControl as lC
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 6, in <module>
+    led = LED(26)  # pin 37 (GPIO26)
+          ^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 108, in __call__
+    self = super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 192, in __init__
+    super().__init__(pin, active_high=active_high,
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/output_devices.py", line 74, in __init__
+    super().__init__(pin, pin_factory=pin_factory)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/mixins.py", line 75, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/devices.py", line 553, in __init__
+    pin = self.pin_factory.pin(pin)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/pi.py", line 413, in pin
+    pin = self.pin_class(self, info)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/gpiozero/pins/lgpio.py", line 126, in __init__
+    lgpio.gpio_claim_input(
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 755, in gpio_claim_input
+    return _u2i(_lgpio._gpio_claim_input(handle&0xffff, lFlags, gpio))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/lgpio.py", line 458, in _u2i
+    raise error(error_text(v))
+lgpio.error: 'GPIO busy'
+ main.py running at 2024-08-01_21:07:14 EDT 2024
+ main.py running at 2024-08-01_21:08:18 EDT 2024
+ main.py running at 2024-08-01_21:09:18 EDT 2024
+ main.py running at 2024-08-01_21:10:19 EDT 2024
+Terminated
+InsectTrapProject/main.py started at 2024-08-01_21:12:06 EDT 2024
+ main.py running at 2024-08-01_21:13:12 EDT 2024
+ main.py running at 2024-08-01_21:14:13 EDT 2024
+ main.py running at 2024-08-01_21:15:19 EDT 2024
+ main.py running at 2024-08-01_21:16:22 EDT 2024
+ main.py running at 2024-08-01_21:17:25 EDT 2024
+ main.py running at 2024-08-01_21:18:25 EDT 2024
+ main.py running at 2024-08-01_21:19:26 EDT 2024
+ main.py running at 2024-08-01_21:20:26 EDT 2024
+ main.py running at 2024-08-01_21:21:27 EDT 2024
+ main.py running at 2024-08-01_21:22:28 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_21:23:07 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+ main.py running at 2024-08-01_21:24:10 EDT 2024
+ main.py running at 2024-08-01_21:25:11 EDT 2024
+ main.py running at 2024-08-01_21:26:16 EDT 2024
+ main.py running at 2024-08-01_21:27:18 EDT 2024
+ main.py running at 2024-08-01_21:28:22 EDT 2024
+ main.py running at 2024-08-01_21:29:22 EDT 2024
+InsectTrapProject/main.py started at 2024-08-01_21:45:46 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+ main.py running at 2024-08-01_21:46:50 EDT 2024
+ main.py running at 2024-08-01_21:47:50 EDT 2024
+ main.py running at 2024-08-01_21:48:50 EDT 2024
+ main.py running at 2024-08-01_21:49:51 EDT 2024
+Terminated
+InsectTrapProject/main.py started at 2024-08-01_22:11:19 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+ main.py running at 2024-08-01_22:12:27 EDT 2024
+ main.py running at 2024-08-01_22:13:29 EDT 2024
+ main.py running at 2024-08-01_22:14:29 EDT 2024
+ main.py running at 2024-08-01_22:15:29 EDT 2024
+ main.py running at 2024-08-01_22:16:30 EDT 2024
+ main.py running at 2024-08-01_22:17:30 EDT 2024
+ main.py running at 2024-08-01_22:18:31 EDT 2024
+ main.py running at 2024-08-01_22:19:34 EDT 2024
+ main.py running at 2024-08-01_22:20:34 EDT 2024
+ main.py running at 2024-08-01_22:21:34 EDT 2024
+ main.py running at 2024-08-01_22:22:37 EDT 2024
+ main.py running at 2024-08-01_22:23:37 EDT 2024
+Terminated
+Log file has not been updated within the last 60 seconds (1010 seconds).\nRebooting...
+InsectTrapProject/main.py started at 2024-08-01_22:41:19 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+ main.py running at 2024-08-01_22:42:26 EDT 2024
+ main.py running at 2024-08-01_22:43:27 EDT 2024
+ main.py running at 2024-08-01_22:44:29 EDT 2024
+ main.py running at 2024-08-01_22:45:30 EDT 2024
+ main.py running at 2024-08-01_22:46:30 EDT 2024
+ main.py running at 2024-08-01_22:47:31 EDT 2024
+ main.py running at 2024-08-01_22:48:31 EDT 2024
+ main.py running at 2024-08-01_22:49:32 EDT 2024
+Terminated
+
+InsectTrapProject/main.py started at 2024-08-01_22:51:07 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-01_22:52:54 EDT 2024
+
+
+Log file has not been updated within the last 60 seconds (67 seconds).
+Rebooting...
+
+
+InsectTrapProject/main.py started at 2024-08-01_22:54:19 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+	main.py running at 2024-08-01_22:55:22 EDT 2024
+	main.py running at 2024-08-01_22:56:24 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-01_22:57:01 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+	main.py running at 2024-08-01_22:58:05 EDT 2024
+	main.py running at 2024-08-01_22:59:05 EDT 2024
+	main.py running at 2024-08-01_23:00:05 EDT 2024
+	main.py running at 2024-08-01_23:01:06 EDT 2024
+	main.py running at 2024-08-01_23:02:07 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-01_23:03:03 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+	main.py running at 2024-08-02_12:20:18 EDT 2024
+	main.py running at 2024-08-02_12:21:19 EDT 2024
+                                                 
+InsectTrapProject/main.py started at 2024-08-02_12:21:56 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 175, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 215, in writeto
+    return self._i2c.writeto(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 60, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 303, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 181, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 205, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 67, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 170, in read_bytes
+    return self._device.read(number)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 70, in <module>
+    main()
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 41, in main
+    lC.manageLight()
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 35, in manageLight
+    if getLight() < LIGHT_THRESHOLD:
+       ^^^^^^^^^^
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 30, in getLight
+    sensor = adafruit_bh1750.BH1750(i2c)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bh1750.py", line 192, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, address)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 62, in __init__
+    self.__probe_for_device()
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 184, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x23
+
+
+Log file has not been updated within the last 120 seconds (2492 seconds).
+Rebooting...
+
+
+InsectTrapProject/main.py started at 2024-08-02_13:03:54 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 175, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 215, in writeto
+    return self._i2c.writeto(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 60, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 303, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 181, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 205, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 67, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 170, in read_bytes
+    return self._device.read(number)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 70, in <module>
+    main()
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 41, in main
+    lC.manageLight()
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 35, in manageLight
+    if getLight() < LIGHT_THRESHOLD:
+       ^^^^^^^^^^
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 30, in getLight
+    sensor = adafruit_bh1750.BH1750(i2c)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bh1750.py", line 192, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, address)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 62, in __init__
+    self.__probe_for_device()
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 184, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x23
+
+InsectTrapProject/main.py started at 2024-08-02_13:05:34 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 175, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 215, in writeto
+    return self._i2c.writeto(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 60, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 303, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 181, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 205, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 67, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 170, in read_bytes
+    return self._device.read(number)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 70, in <module>
+    main()
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 41, in main
+    lC.manageLight()
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 35, in manageLight
+    if getLight() < LIGHT_THRESHOLD:
+       ^^^^^^^^^^
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 30, in getLight
+    sensor = adafruit_bh1750.BH1750(i2c)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bh1750.py", line 192, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, address)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 62, in __init__
+    self.__probe_for_device()
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 184, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x23
+
+
+Log file has not been updated within the last 120 seconds (143 seconds).
+Rebooting...
+
+
+InsectTrapProject/main.py started at 2024-08-02_13:08:28 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 175, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 215, in writeto
+    return self._i2c.writeto(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 60, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 303, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 181, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 205, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 67, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 170, in read_bytes
+    return self._device.read(number)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 70, in <module>
+    main()
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 41, in main
+    lC.manageLight()
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 35, in manageLight
+    if getLight() < LIGHT_THRESHOLD:
+       ^^^^^^^^^^
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 30, in getLight
+    sensor = adafruit_bh1750.BH1750(i2c)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bh1750.py", line 192, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, address)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 62, in __init__
+    self.__probe_for_device()
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 184, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x23
+
+InsectTrapProject/main.py started at 2024-08-02_13:10:59 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 175, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 215, in writeto
+    return self._i2c.writeto(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 60, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 303, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 181, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 205, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 67, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 170, in read_bytes
+    return self._device.read(number)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 70, in <module>
+    main()
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 41, in main
+    lC.manageLight()
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 35, in manageLight
+    if getLight() < LIGHT_THRESHOLD:
+       ^^^^^^^^^^
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 30, in getLight
+    sensor = adafruit_bh1750.BH1750(i2c)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bh1750.py", line 192, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, address)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 62, in __init__
+    self.__probe_for_device()
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 184, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x23
+
+
+Log file has not been updated within the last 120 seconds (179 seconds).
+Rebooting...
+
+
+InsectTrapProject/main.py started at 2024-08-02_13:14:16 EDT 2024
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 175, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 215, in writeto
+    return self._i2c.writeto(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 60, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 303, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 181, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/busio.py", line 205, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 67, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/Adafruit_PureIO/smbus.py", line 170, in read_bytes
+    return self._device.read(number)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 70, in <module>
+    main()
+  File "/home/pi/InsectTrap/InsectTrapProject/main.py", line 41, in main
+    lC.manageLight()
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 35, in manageLight
+    if getLight() < LIGHT_THRESHOLD:
+       ^^^^^^^^^^
+  File "/home/pi/InsectTrap/InsectTrapProject/lightControl.py", line 30, in getLight
+    sensor = adafruit_bh1750.BH1750(i2c)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bh1750.py", line 192, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, address)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 62, in __init__
+    self.__probe_for_device()
+  File "/home/pi/InsectTrap/lib/python3.11/site-packages/adafruit_bus_device/i2c_device.py", line 184, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x23
+
+InsectTrapProject/main.py started at 2024-08-02_14:21:30 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_14:21:45 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_14:23:06 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_14:23:51 EDT 2024
+	main.py running at 2024-08-02_14:24:54 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_14:29:04 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_14:29:44 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_14:30:04 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_14:31:33 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_14:34:58 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_14:35:56 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-02_15:44:52 EDT 2024
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+	main.py running at 2024-08-02_15:46:00 EDT 2024
+	main.py running at 2024-08-02_15:47:10 EDT 2024
+	main.py running at 2024-08-02_15:48:17 EDT 2024
+	main.py running at 2024-08-02_15:49:23 EDT 2024
+	main.py running at 2024-08-02_15:50:33 EDT 2024
+	main.py running at 2024-08-02_15:51:33 EDT 2024
+	main.py running at 2024-08-02_15:52:44 EDT 2024
+	main.py running at 2024-08-02_15:53:44 EDT 2024
+	main.py running at 2024-08-02_15:54:44 EDT 2024
+	main.py running at 2024-08-02_15:55:44 EDT 2024
+	main.py running at 2024-08-02_15:56:45 EDT 2024
+	main.py running at 2024-08-02_15:57:52 EDT 2024
+	main.py running at 2024-08-02_15:58:59 EDT 2024
+	main.py running at 2024-08-02_16:00:08 EDT 2024
+	main.py running at 2024-08-02_16:01:22 EDT 2024
+	main.py running at 2024-08-02_16:02:28 EDT 2024
+	main.py running at 2024-08-02_16:03:28 EDT 2024
+	main.py running at 2024-08-02_16:04:31 EDT 2024
+	main.py running at 2024-08-02_16:05:42 EDT 2024
+	main.py running at 2024-08-02_16:06:42 EDT 2024
+	main.py running at 2024-08-02_16:07:46 EDT 2024
+	main.py running at 2024-08-02_16:09:01 EDT 2024
+	main.py running at 2024-08-02_16:10:13 EDT 2024
+	main.py running at 2024-08-02_16:11:15 EDT 2024
+	main.py running at 2024-08-02_16:12:15 EDT 2024
+	main.py running at 2024-08-02_16:13:21 EDT 2024
+	main.py running at 2024-08-02_16:14:21 EDT 2024
+	main.py running at 2024-08-02_16:15:21 EDT 2024
+	main.py running at 2024-08-02_16:16:21 EDT 2024
+	main.py running at 2024-08-02_16:17:35 EDT 2024
+	main.py running at 2024-08-02_16:18:44 EDT 2024
+	main.py running at 2024-08-02_16:19:54 EDT 2024
+	main.py running at 2024-08-02_16:20:57 EDT 2024
+	main.py running at 2024-08-02_16:21:57 EDT 2024
+	main.py running at 2024-08-02_16:23:02 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-05_11:32:27 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-05_11:33:27 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-05_11:35:22 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-05_11:36:06 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-05_11:46:24 EDT 2024
+	main.py running at 2024-08-05_11:47:34 EDT 2024
+	main.py running at 2024-08-05_11:49:10 EDT 2024
+	main.py running at 2024-08-05_11:50:17 EDT 2024
+	main.py running at 2024-08-05_11:51:22 EDT 2024
+
+InsectTrapProject/main.py started at 2024-08-05_11:53:32 EDT 2024
+	main.py running at 2024-08-05_11:54:52 EDT 2024
+	main.py running at 2024-08-05_11:55:56 EDT 2024
