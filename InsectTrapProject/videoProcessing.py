@@ -1,9 +1,13 @@
 import datetime
-#from picamera import PiCamera
-from time import time
+from picamera2 import Picamera2, Preview
+from time import time, sleep
 
 import cv2
 import pytz
+import os
+import shutil
+import numpy as np
+from PIL import Image, ImageFont, ImageDraw
 
 # wait 100 frames before taking picture to let camera adjust to light
 waitFrames = 100
@@ -22,13 +26,30 @@ font_size = 1
 font_thickness = 1
 
 
+def initializePicamera():
+    picam2 = Picamera2()
+    camera_config = picam2.create_still_configuration(main={"size": (1920, 1080)}, lores={"size": (640, 480)}, display="lores")
+    picam2.configure(camera_config)
+    #picam2.start_preview(Preview.QTGL)
+    picam2.start()
+    time.sleep(2)
+    picam2.capture_file("test.jpg")
+
 def initialize():
     # Start capturing video input from the camera
-    camera_id = -1
-    cap = cv2.VideoCapture(camera_id)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+    #camera_id = -1
+    #cap = cv2.VideoCapture(camera_id, cv2.CAP_ANY)
+    #cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+    #cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
     # cv2.resizeWindow('cap', 480, 640)
+    cap = Picamera2()
+    #camera_config = cap.create_preview_configuration()
+    #cap.configure(camera_config)
+    #cap.start_preview(Preview.DRM)
+    cap.start()
+    #print('Initialize Camera', cap)
+    sleep(1)
+    
     return cap
 
 
@@ -46,16 +67,18 @@ def adjust_contrast_brightness(
 
 
 def cameraOpen(cap):
-    return cap.isOpened()
+    return cap.started #True #cap.isOpened()
 
 
-def checkCamera(cap):
-    success, image = cap.read()
-    image = adjust_contrast_brightness(image, contrast=2, brightness=80)
-    # image = cv2.flip(image, 1)
-    if not success:
-        raise Exception("ERROR: Unable to read from camera.")
-    return success, image
+def saveImage(cap, image_path):
+    frame = cap.capture_image()
+    img = Image.fromarray(np.array(frame))
+    img = img.convert("RGB")
+    img.save(image_path, "JPEG")
+    #cv2.imwrite('/home/pi/InsectTrap/picture.jpg', np.array(frame))
+    #cap.capture_file('/home/pi/InsectTrap/picture.jpg')
+    return frame
+
 
 
 def calculateFPS(counter, start_time, end_time, fps):
@@ -106,9 +129,13 @@ def getNamestamp(timestamp):
     return timestamp[0:10] + "_" + timestamp[11:19]
 
 
-def showFrame(image, title):
-    cv2.imshow(title, image)
-    cv2.namedWindow(title)
+def showFrame(frame, title):
+    #frame.show()
+    draw = ImageDraw.Draw(frame)
+    font = ImageFont.truetype("/home/pi/InsectTrap/InsectTrapProject/OpenSans-Regular.ttf", 32)
+    draw.text((0,0), title, (255, 0, 0), font=font)
+    frame.show(title=title)
+    #cv2.waitKey(1)
 
 
 def showBug(image, found, insect, bug, auto):
@@ -146,8 +173,28 @@ def save_ML_image(image, found, insect, bug, good):
         name = namestamp + ".PNG"
         showTimestamp(image, timestamp)
         cv2.imwrite(directory + name, image)
+    return directory + name
 
-
+def move_rename_image(image_path, results, good):
+    not_found_dir = '/home/pi/InsectTrap/images/NotFound'
+    found_dir = '/home/pi/InsectTrap/images/Found'
+    timestamp = getTimestamp()
+    namestamp = getNamestamp(timestamp)
+    taxon_name = results['taxon_most_likely_scientific_name']
+    taxon_name_formatted = ''.join(word.capitalize() for word in taxon_name.split())
+    if taxon_name == 'Not Found':
+        new_filename = f"{namestamp}_{taxon_name_formatted}.jpg"
+        os.makedirs(not_found_dir, exist_ok=True)
+        shutil.move(image_path, os.path.join(not_found_dir, new_filename))
+    else:
+        if good:
+            gb = "good"
+        else:
+            gb = "bad"
+        new_filename = f"{namestamp}_{taxon_name_formatted}_{gb}.jpg"
+        os.makedirs(found_dir, exist_ok=True)
+        shutil.move(image_path, os.path.join(found_dir, new_filename))
+        
 def exit(cap):
-    cap.release()
+    cap.close()
     cv2.destroyAllWindows()

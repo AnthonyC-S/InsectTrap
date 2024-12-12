@@ -1,9 +1,10 @@
 # Insect Trap Information
 Anthony Nicolaides (ajn68)
+Anthony Coffin-Schmitt (awc93)
 Professor Sunghwan Jung
-Last Edited: August 2024
+Last Edited: Decemeber 2024
 
-Insect trap with machine learning algorithim to selectively kill insects. Ran on Raspberry Pi Zero 2 W.
+Insect trap with iNaturalist intergration to selectively kill insects. Ran on Raspberry Pi  4B.
 
 # Equipment
 - Raspberry pi
@@ -39,7 +40,19 @@ Insect trap with machine learning algorithim to selectively kill insects. Ran on
 	- positive end connected to GPIO12
 	- GND
 
+# Note about wiring
+
+Check `lightControl.py` to see which pins are assigned to the LEDs.
+
+Check `servoControl.py` to see which pins are assigned to the servos.  
+
 # Before Starting Program
+
+See setup_notes.txt for python environment details. 
+
+This code utilizes pigpio, please run `sudo pigpiod` to allow pigpio to work.
+
+## If using Raspberry Pi Zero
 InsectTrap contains an environment with all necessary packages installed. Run `source path/to/InsectTrap/bin/activate` to start environment (`deactivate` to close environment).
 Python3 should already be in the virtual environment.
 
@@ -56,6 +69,7 @@ Make the following modifications to the `config.txt` file:
   `gpu_mem=128`
 
 Ensure I2C is enabled in `sudo raspi-config`
+
 
 # Recommendations
 If using a Raspberry Pi Zero model, consider changing the pi to auto boot to console instead of desktop to converse power. Having the program running while using the desktop can cause lag.
