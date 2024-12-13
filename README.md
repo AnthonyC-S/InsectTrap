@@ -5,7 +5,7 @@ Professor Sunghwan Jung
 
 Last Edited: Decemeber 2024
 
-Insect trap with iNaturalist intergration to selectively kill insects. Ran on Raspberry Pi  4B.
+Insect trap with iNaturalist intergration to monitor insect populations or selectively capture/kill insect pests. Ran on Raspberry Pi  4B.
 
 # Equipment
 - Raspberry Pi
@@ -33,12 +33,12 @@ Insect trap with iNaturalist intergration to selectively kill insects. Ran on Ra
 	- SCL: GPIO3
 	- SDA: GPIO2
 - 3 LEDs for main chamber:
-	- connected all in parallel
-	- positive end connected to GPIO26
+	- Connected all in parallel
+	- Positive end connected to GPIO26
 	- GND
 - 9 LEDs for funnel:
-	- connected all in parallel
-	- positive end connected to GPIO12
+	- Connected all in parallel
+	- Positive end connected to GPIO12
 	- GND
 
 # Note about wiring
@@ -49,31 +49,12 @@ Check `servoControl.py` to see which pins are assigned to the servos.
 
 # Before Starting Program
 
-See [INSTALL.md](INSTALL.md) for python environment details. 
+See [INSTALL.md](INSTALL.md) for setting up Python envrionment on device. 
 
 This code utilizes pigpio, please run `sudo pigpiod` to allow pigpio to work.
 
-## If using Raspberry Pi Zero
-InsectTrap contains an environment with all necessary packages installed. Run `source path/to/InsectTrap/bin/activate` to start environment (`deactivate` to close environment).
-Python3 should already be in the virtual environment.
-
-Run `pip3 install -r path/to/InsectTrap/requirements.txt` to make sure all necessary packages are installed.
-
-If running on a Raspberry Pi Zero model, make sure to modify your config.txt file.
-Open your config file with `sudo nano /boot/firmware/config.txt` or `sudo nano /boot/config.txt` for older OS versions.
-
-Make the following modifications to the `config.txt` file:
-  If present, comment or delete `camera__auto_detect=1`
-  Ensure the following lines are present, if not, add them in:
-
-  `start_x=1`
-  `gpu_mem=128`
-
-Ensure I2C is enabled in `sudo raspi-config`
-
-
 # Recommendations
-If using a Raspberry Pi Zero model, consider changing the pi to auto boot to console instead of desktop to converse power. Having the program running while using the desktop can cause lag.
+If using a Raspberry Pi Zero model, consider changing the Pi to auto boot to console instead of desktop to converse power. Having the program running while using the desktop can cause lag.
 
 # Cron jobs
 Cron jobs are ran at regular intervals and are useful for when the insect trap is operating for long periods of time as if updates troubleshooting logs and auto runs the python script if it ever stops during its operation in the field.
