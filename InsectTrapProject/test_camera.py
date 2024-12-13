@@ -1,13 +1,3 @@
-# import cv2
-
-# cap = cv2.VideoCapture(0)
-# success, image = cap.read()
-
-# print(image)
-
-# cap.release()
-# cv2.destroyAllWindows()
-
 import time
 from picamera2 import Picamera2, Preview
 
