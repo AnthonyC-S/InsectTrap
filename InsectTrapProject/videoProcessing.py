@@ -30,24 +30,13 @@ def initializePicamera():
     picam2 = Picamera2()
     camera_config = picam2.create_still_configuration(main={"size": (1920, 1080)}, lores={"size": (640, 480)}, display="lores")
     picam2.configure(camera_config)
-    #picam2.start_preview(Preview.QTGL)
     picam2.start()
     time.sleep(2)
     picam2.capture_file("test.jpg")
 
 def initialize():
-    # Start capturing video input from the camera
-    #camera_id = -1
-    #cap = cv2.VideoCapture(camera_id, cv2.CAP_ANY)
-    #cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-    #cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
-    # cv2.resizeWindow('cap', 480, 640)
     cap = Picamera2()
-    #camera_config = cap.create_preview_configuration()
-    #cap.configure(camera_config)
-    #cap.start_preview(Preview.DRM)
     cap.start()
-    #print('Initialize Camera', cap)
     sleep(1)
     
     return cap
@@ -75,8 +64,6 @@ def saveImage(cap, image_path):
     img = Image.fromarray(np.array(frame))
     img = img.convert("RGB")
     img.save(image_path, "JPEG")
-    #cv2.imwrite('/home/pi/InsectTrap/picture.jpg', np.array(frame))
-    #cap.capture_file('/home/pi/InsectTrap/picture.jpg')
     return frame
 
 
@@ -130,12 +117,10 @@ def getNamestamp(timestamp):
 
 
 def showFrame(frame, title):
-    #frame.show()
     draw = ImageDraw.Draw(frame)
     font = ImageFont.truetype("/home/pi/InsectTrap/InsectTrapProject/OpenSans-Regular.ttf", 32)
     draw.text((0,0), title, (255, 0, 0), font=font)
     frame.show(title=title)
-    #cv2.waitKey(1)
 
 
 def showBug(image, found, insect, bug, auto):

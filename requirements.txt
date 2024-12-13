@@ -13,7 +13,6 @@ asttokens==2.2.1
 attrs==24.2.0
 av==10.0.0
 Babel==2.10.3
-beautifulsoup4==4.11.2
 binho-host-adapter==0.1.6
 blinker==1.5
 board==1.0

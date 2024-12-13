@@ -1,23 +1,24 @@
 # Insect Trap Information
-Anthony Nicolaides (ajn68)
-Anthony Coffin-Schmitt (awc93)
+Anthony Nicolaides (ajn68),
+Anthony Coffin-Schmitt (awc93),
 Professor Sunghwan Jung
+
 Last Edited: Decemeber 2024
 
 Insect trap with iNaturalist intergration to selectively kill insects. Ran on Raspberry Pi  4B.
 
 # Equipment
-- Raspberry pi
-- Raspberry pi Camera
+- Raspberry Pi
+- Raspberry Pi Camera
 - Two SG90 micro servos
 - adafruit BH1750 Light Sensor
 - 12 small LED lights
 
 # Wiring
-- Raspberry pi: 
+- Raspberry Pi: 
 	- Powered via solar panel manager (which is connected to a solar panel)
 - Camera: 
-	- Raspberry pi camera module via ribbon cable
+	- Raspberry Pi camera module via ribbon cable
 - Servo in main chamber: 
 	- 3.3V
 	- GND
@@ -48,7 +49,7 @@ Check `servoControl.py` to see which pins are assigned to the servos.
 
 # Before Starting Program
 
-See setup_notes.txt for python environment details. 
+See [INSTALL.md](INSTALL.md) for python environment details. 
 
 This code utilizes pigpio, please run `sudo pigpiod` to allow pigpio to work.
 
